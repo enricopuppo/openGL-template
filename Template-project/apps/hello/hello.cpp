@@ -3,7 +3,10 @@
 // non cambiare l'ordine
 #include <GLFW/glfw3.h>
 
-void draw() { glClearColor(1, 0, 0, 0); }
+void draw(int width, int height) {
+  glViewport(0, 0, width, height);
+  glClearColor(1, 0, 0, 0);
+}
 
 int main() {
   // open window
@@ -18,6 +21,9 @@ int main() {
 
   // run GUI loop
   while (!glfwWindowShouldClose(window)) {
+    int width = 0, height = 0;
+    glfwGetFramebufferSize(window, &width, &height);
+    draw(width, height);
     glfwSwapBuffers(window);
     glfwPollEvents();
   }
