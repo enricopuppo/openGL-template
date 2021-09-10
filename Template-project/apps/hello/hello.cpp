@@ -10,6 +10,9 @@ int main() {
   auto window = glfwCreateWindow(521, 521, "ciao Enrico", nullptr, nullptr);
   glfwMakeContextCurrent(window);
   glfwShowWindow(window);
+
+  gladLoadGL();
+
   while (!glfwWindowShouldClose(window)) {
     glClearColor(1, 0, 0, 0);
     glfwSwapBuffers(window);
