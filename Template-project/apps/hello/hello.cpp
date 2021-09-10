@@ -1,4 +1,8 @@
+// non cambiare l'ordine
+#include <glad/glad.h>
+// non cambiare l'ordine
 #include <GLFW/glfw3.h>
+
 #include <thread>
 
 int main() {
