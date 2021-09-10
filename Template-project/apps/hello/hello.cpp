@@ -72,8 +72,6 @@ int main() {
       ImGui_ImplOpenGL3_NewFrame();
       ImGui_ImplGlfw_NewFrame();
       ImGui::NewFrame();
-      auto wwidth = 0, wheight = 0;
-      glfwGetWindowSize(window, &wwidth, &wheight);
       if (ImGui::Begin("ciao", nullptr, ImGuiWindowFlags_NoSavedSettings))
         draw_widgets();
       ImGui::End();
