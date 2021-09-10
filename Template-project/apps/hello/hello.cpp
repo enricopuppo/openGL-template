@@ -9,6 +9,7 @@ int main() {
   glfwInit();
   auto window = glfwCreateWindow(521, 521, "ciao Enrico", nullptr, nullptr);
   glfwMakeContextCurrent(window);
+  glfwSwapInterval(1); // Enable vsync
   glfwShowWindow(window);
 
   gladLoadGL();
