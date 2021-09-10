@@ -12,10 +12,7 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
-        "YOCTO_EMBREE": "ON",
-        "YOCTO_DENOISE": "ON",
-        "YOCTO_OPENGL": "ON"
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
       }
     },
     {
@@ -24,10 +21,7 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "YOCTO_EMBREE": "ON",
-        "YOCTO_DENOISE": "ON",
-        "YOCTO_OPENGL": "ON"
+        "CMAKE_BUILD_TYPE": "Debug"
       }
     }
   ],
