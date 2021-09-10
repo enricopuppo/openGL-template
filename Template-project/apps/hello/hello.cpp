@@ -6,6 +6,10 @@ int main() {
   auto window = glfwCreateWindow(521, 521, "ciao Enrico", nullptr, nullptr);
   glfwMakeContextCurrent(window);
   glfwShowWindow(window);
+  while (!glfwWindowShouldClose(window)) {
+    glClearColor(1, 0, 0, 0);
+    glfwSwapBuffers(window);
+  }
   std::this_thread::sleep_for(std::chrono::seconds(2));
   glfwDestroyWindow(window);
   glfwTerminate();
