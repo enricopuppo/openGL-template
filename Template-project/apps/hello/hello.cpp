@@ -12,13 +12,15 @@
 
 void draw_widgets() {}
 
-void draw_window(int width, int height) {
+void draw_window(int width, int height)
+{
   glViewport(0, 0, width, height);
   glClearColor(1, 0, 0, 0);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-int main() {
+int main()
+{
   // open window
   if (!glfwInit())
     printf("bad glfw\n");
@@ -37,9 +39,12 @@ int main() {
   if (!gladLoadGL())
     printf("bad glad\n");
 
+  printf("Supported GLSL version: %s.\n", (char *)glGetString(GL_SHADING_LANGUAGE_VERSION));
+
   // widgets
   auto widgets = true;
-  if (widgets) {
+  if (widgets)
+  {
     ImGui::CreateContext();
     ImGui::GetIO().IniFilename = nullptr;
     ImGui::GetStyle().WindowRounding = 0;
@@ -49,7 +54,8 @@ int main() {
 #else
     ImGui_ImplOpenGL3_Init("#version 330");
 #endif
-    if (widgets) {
+    if (widgets)
+    {
       ImGui::CreateContext();
       ImGui::GetIO().IniFilename = nullptr;
       ImGui::GetStyle().WindowRounding = 0;
@@ -62,7 +68,8 @@ int main() {
     }
 
     // run GUI loop
-    while (!glfwWindowShouldClose(window)) {
+    while (!glfwWindowShouldClose(window))
+    {
       // window drawing
       auto width = 0, height = 0;
       glfwGetFramebufferSize(window, &width, &height);
